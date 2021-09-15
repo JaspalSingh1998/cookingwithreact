@@ -1,7 +1,10 @@
+import Recipe from "./RecipeList";
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <Recipe />
+    </>
   );
 }
 
