@@ -22,7 +22,8 @@ const sampleRecipes = [
     name: "Plain Pork",
     servings: 5,
     cookTime: "0:45",
-    instructions: "1. Put peprika on Pork\n 2. Put Pork on oven\n 3. Eat Pork",
+    instructions:
+      "1. Put peprika on Pork \n 2. Put Pork on oven \n 3. Eat Pork",
   },
 ];
 

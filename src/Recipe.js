@@ -1,6 +1,6 @@
 import React from "react";
 
-function Recipe({ name, cookTime, instructions }) {
+function Recipe({ name, cookTime, instructions, servings }) {
   return (
     <div>
       <div>
@@ -16,7 +16,7 @@ function Recipe({ name, cookTime, instructions }) {
       </div>
       <div>
         <span>Servings:</span>
-        <span>3</span>
+        <span>{servings}</span>
       </div>
       <div>
         <span>Instructions:</span>
