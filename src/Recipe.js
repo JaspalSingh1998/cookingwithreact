@@ -1,10 +1,10 @@
 import React from "react";
 
-function Recipe() {
+function Recipe({ name, cookTime, instructions }) {
   return (
     <div>
       <div>
-        <h3>Plain Chicken</h3>
+        <h3>{name}</h3>
         <div>
           <button>Edit</button>
           <button>Delete</button>
@@ -12,7 +12,7 @@ function Recipe() {
       </div>
       <div>
         <span>Cook Time:</span>
-        <span>1: 45</span>
+        <span>{cookTime}</span>
       </div>
       <div>
         <span>Servings:</span>
@@ -20,7 +20,7 @@ function Recipe() {
       </div>
       <div>
         <span>Instructions:</span>
-        <div>1. Put salt on chicken 2. Put chicken on oven 3. Eat Chicken</div>
+        <div>{instructions}</div>
       </div>
     </div>
   );
