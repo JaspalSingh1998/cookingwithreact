@@ -5,7 +5,7 @@ const IngredientList = ({ ingredients }) => {
   const ingredientElements = ingredients.map((ingredient) => {
     return <Ingredient {...ingredient} key={ingredient.id} />;
   });
-  return <div>{ingredientElements}</div>;
+  return <div className="ingredient-grid">{ingredientElements}</div>;
 };
 
 export default IngredientList;
