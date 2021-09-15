@@ -3,11 +3,14 @@ import Recipe from "./Recipe";
 
 function RecipeList({ recipes }) {
   return (
-    <div>
-      {recipes.map((recipe) => {
-        return <Recipe {...recipe} key={recipe.id} />;
-      })}
-    </div>
+    <>
+      <div>
+        {recipes.map((recipe) => {
+          return <Recipe {...recipe} key={recipe.id} />;
+        })}
+      </div>
+      <button>Add Recipe</button>
+    </>
   );
 }
 

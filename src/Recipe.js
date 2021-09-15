@@ -1,6 +1,7 @@
 import React from "react";
+import IngredientList from "./IngredientList";
 
-function Recipe({ name, cookTime, instructions, servings }) {
+function Recipe({ name, cookTime, instructions, servings, ingredients }) {
   return (
     <div>
       <div>
@@ -21,6 +22,12 @@ function Recipe({ name, cookTime, instructions, servings }) {
       <div>
         <span>Instructions:</span>
         <div>{instructions}</div>
+      </div>
+      <div>
+        <span>Instructions:</span>
+        <div>
+          <IngredientList ingredients={ingredients} />
+        </div>
       </div>
     </div>
   );

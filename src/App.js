@@ -16,6 +16,18 @@ const sampleRecipes = [
     cookTime: "1:45",
     instructions:
       "1. Put salt on chicken\n 2. Put chicken on oven\n 3. Eat Chicken",
+    ingredients: [
+      {
+        id: 1,
+        name: "Chicken",
+        amount: "2 Pounds",
+      },
+      {
+        id: 2,
+        name: "Salt",
+        amount: "1 lbs",
+      },
+    ],
   },
   {
     id: 2,
@@ -24,6 +36,18 @@ const sampleRecipes = [
     cookTime: "0:45",
     instructions:
       "1. Put peprika on Pork \n 2. Put Pork on oven \n 3. Eat Pork",
+    ingredients: [
+      {
+        id: 1,
+        name: "Pork",
+        amount: "3 Pounds",
+      },
+      {
+        id: 2,
+        name: "Paprika",
+        amount: "2 Tbs",
+      },
+    ],
   },
 ];
 
