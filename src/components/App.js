@@ -22,9 +22,17 @@ function App() {
     };
     setRecipes([...recipes, newRecipe]);
   }
+  function handleRecipeDelete(id) {
+    let updatedRecipes = recipes.filter((recipe) => recipe.id !== id);
+    setRecipes(updatedRecipes);
+  }
   return (
     <>
-      <Recipe recipes={recipes} handleRecipeAdd={handleRecipeAdd} />
+      <Recipe
+        recipes={recipes}
+        handleRecipeAdd={handleRecipeAdd}
+        handleRecipeDelete={handleRecipeDelete}
+      />
     </>
   );
 }
