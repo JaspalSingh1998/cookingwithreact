@@ -18,9 +18,7 @@ function App() {
 
   useEffect(() => {
     const recipeJSON = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (recipeJSON != null) {
-      setRecipes(JSON.parse(recipeJSON));
-    }
+    if (recipeJSON != null) setRecipes(JSON.parse(recipeJSON));
   }, []);
 
   useEffect(() => {
@@ -31,7 +29,15 @@ function App() {
     handleRecipeAdd,
     handleRecipeDelete,
     handleRecipeSelect,
+    handleRecipeChange,
   };
+
+  function handleRecipeChange(id, recipe) {
+    const newRecipes = [...recipes];
+    const index = newRecipes.findIndex((r) => r.id === id);
+    newRecipes[index] = recipe;
+    setRecipes(newRecipes);
+  }
 
   function handleRecipeSelect(id) {
     setSelectedRecipeId(id);
