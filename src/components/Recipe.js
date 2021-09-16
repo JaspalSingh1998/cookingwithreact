@@ -3,13 +3,18 @@ import { RecipeContext } from "./App";
 import IngredientList from "./IngredientList";
 
 function Recipe({ id, name, cookTime, instructions, servings, ingredients }) {
-  const { handleRecipeDelete } = useContext(RecipeContext);
+  const { handleRecipeDelete, handleRecipeSelect } = useContext(RecipeContext);
   return (
     <div className="recipe">
       <div className="recipe__header">
         <h3 className="recipe__title">{name}</h3>
         <div>
-          <button className="btn btn--primary mr-1">Edit</button>
+          <button
+            className="btn btn--primary mr-1"
+            onClick={() => handleRecipeSelect(id)}
+          >
+            Edit
+          </button>
           <button
             className="btn btn--danger mr-1"
             onClick={() => handleRecipeDelete(id)}
